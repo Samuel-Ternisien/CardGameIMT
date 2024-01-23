@@ -1,8 +1,10 @@
 package etu.imt.cardgame;
 
+import etu.imt.cardgame.Monsters.Monster;
+import etu.imt.cardgame.Monsters.NecroMonster;
+import etu.imt.cardgame.Monsters.SimpleMonster;
+
 public class Main {
-    public static void main(String[] args) {
-        Monster m1=new Monster("M1", 15, 5);
-        Monster m2=new Monster("M2", 15, 5);
+    public static void main(String[] args) throws Exception {
     }
 }
