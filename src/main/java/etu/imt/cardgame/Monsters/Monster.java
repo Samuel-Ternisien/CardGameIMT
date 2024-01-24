@@ -4,7 +4,7 @@ import etu.imt.cardgame.Unit;
 
 public abstract class Monster implements Unit {
     private static int count = 0;
-    private int id;
+    private final int id;
     private String name;
     private int health;
     private int power;
