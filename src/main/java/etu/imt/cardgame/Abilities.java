@@ -6,6 +6,12 @@ public enum Abilities {
         void useAbility(Unit target){
             target.receiveDamage(-5);
         }
+    },
+    Attaque{
+        @Override
+        void useAbility(Unit target){
+            target.receiveDamage(10);
+        }
     };
     abstract void useAbility(Unit target);
 }
