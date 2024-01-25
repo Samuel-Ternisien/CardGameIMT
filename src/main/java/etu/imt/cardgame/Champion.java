@@ -30,4 +30,8 @@ public class Champion implements Unit{
     public int getHealth() {
         return this.health;
     }
+
+    public void useAbility(Unit target){
+        ability.useAbility(target);
+    }
 }
