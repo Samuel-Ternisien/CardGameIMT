@@ -34,4 +34,20 @@ public class Champion implements Unit{
     public void useAbility(Unit target){
         ability.useAbility(target);
     }
+
+    // Ajout de la fonciton jouerCarte que j'utilise dans PlateaudeJeu
+    public void jouerCarte() {
+        useAbility(this);
+    }
+
+    @Override
+    public String toString() {
+        return "Champion{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", health=" + health +
+                ", ability=" + ability +
+                '}';
+    }
+
 }
