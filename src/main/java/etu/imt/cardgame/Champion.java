@@ -2,19 +2,27 @@ package etu.imt.cardgame;
 
 import etu.imt.cardgame.Monsters.Monster;
 
+import java.util.ArrayList;
+
 public class Champion implements Unit{
     private static int count = 0;
     private final int id;
     private String name;
     private int health;
-    Abilities ability;
+    private Abilities ability;
+    private ArrayList<Monster> deck;
+    private ArrayList<Monster> onBoard;
 
-    public Champion(int id, String name, int health, Abilities ability) {
-        this.id = count++;
+    public Champion(String name, int health, Abilities ability) {
+        this.id = ++count;
         this.name = name;
         this.health = health;
         this.ability = ability;
+        this.deck = new ArrayList<Monster>();
+        this.onBoard = new ArrayList<Monster>();
     }
+
+
 
     @Override
     public void receiveDamage(int amount) {
@@ -30,14 +38,22 @@ public class Champion implements Unit{
     public int getHealth() {
         return this.health;
     }
+    public String getName(){
+        return this.name;
+    }
 
     public void useAbility(Unit target){
         ability.useAbility(target);
     }
 
-    // Ajout de la fonciton jouerCarte que j'utilise dans PlateaudeJeu
-    public void jouerCarte() {
-        useAbility(this);
+    // Ajout de la fonction jouerCarte que j'utilise dans PlateaudeJeu
+    public void jouerCarte(int id) {
+        // On récupére le monstre du deck grâce à son id
+        Monster m = getMonsterById(id);
+        // On le rajoute sur le plateau
+        onBoard.add(m);
+        // Puis on le supprime du deck
+        deck.remove(m);
     }
 
     @Override
@@ -48,6 +64,27 @@ public class Champion implements Unit{
                 ", health=" + health +
                 ", ability=" + ability +
                 '}';
+    }
+
+    public void addMonster(Monster monster) {
+        this.deck.add(monster);
+    }
+
+    public ArrayList<Monster> getDeck(){
+        return this.deck;
+    }
+
+    public ArrayList<Monster> getOnBoard(){
+        return onBoard;
+    }
+
+    public Monster getMonsterById(int id){
+        for (Monster monster : deck) {
+            if (monster.getId()==id) {
+                return monster;
+            }
+        }
+        return null;
     }
 
 }
