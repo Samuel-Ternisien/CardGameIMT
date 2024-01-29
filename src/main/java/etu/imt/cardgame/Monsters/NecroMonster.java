@@ -1,9 +1,18 @@
 package etu.imt.cardgame.Monsters;
 
+import etu.imt.cardgame.Unit;
+
 public class NecroMonster extends Monster {
 
     public NecroMonster(String name, int health, int power) {
         super(name, health, power);
+    }
+
+    @Override
+    public void targetUnit(Unit target) throws Exception {
+        if (target.getClass() == ShieldMonster.class){
+            resurrect((Monster)target);
+        }
     }
 
     public Monster resurrect(Monster target) throws Exception {
