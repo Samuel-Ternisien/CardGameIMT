@@ -19,10 +19,7 @@ public class Main {
         PlateauDeJeu plateau = new PlateauDeJeu(champion1, champion2);
 
         plateau.debuterPartie();
-        // plateau.tourJoueur(champion1);
-        // plateau.tourJoueur(champion2);
-        System.out.println(champion1.getShield());
-        System.out.println(champion2.getShield());
+        plateau.menuTour(champion1, champion2);
 /*
         for (int i = 0; i < 5; i++) {
             System.out.println("Tour " + (i + 1));
@@ -38,30 +35,5 @@ public class Main {
 
         scanner.close();
  */
-    }
-
-    private static void jouerTour(PlateauDeJeu plateau, Champion joueur, Scanner scanner) {
-        System.out.println(joueur + ", c'est à votre tour.");
-
-
-        // Demandez au joueur de jouer une carte
-        System.out.println("Voulez-vous jouer une carte ? (oui/non)");
-        String reponse = scanner.nextLine();
-
-        if (reponse.equalsIgnoreCase("oui")) {
-
-        }
-
-        // Demandez au joueur d'utiliser sa capacité spéciale
-        System.out.println("Voulez-vous utiliser votre capacité spéciale ? (oui/non)");
-        reponse = scanner.nextLine();
-
-        if (reponse.equalsIgnoreCase("oui")) {
-            joueur.useAbility(plateau.getAdversaire(joueur));
-        }
-
-        // Attendez que le joueur confirme la fin de son tour
-        System.out.println("Appuyez sur Entrée pour terminer votre tour.");
-        scanner.nextLine();
     }
 }

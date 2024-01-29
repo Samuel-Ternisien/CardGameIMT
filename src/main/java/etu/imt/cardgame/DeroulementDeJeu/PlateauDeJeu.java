@@ -44,7 +44,7 @@ public class PlateauDeJeu {
 
     }
 
-    public void tourJoueur(Champion joueur) {
+    public void tourJoueur(Champion joueur, Champion target) {
         // Tour d'un joueur
         Monster choice = drawRandomMonster();
         log.info(String.format("Le joueur %s commence son tour et pioche: %s", joueur.getName(), choice.getName()));
@@ -60,13 +60,10 @@ public class PlateauDeJeu {
             }
 
         }
-        menuTour(joueur);
-
-        joueur.useAbility(joueur2);
-        attaquerAvecMonstres(joueur);
+        menuTour(joueur, target);
     }
 
-    public void menuTour (Champion joueur) {
+    public void menuTour(Champion joueur, Champion target) {
         System.out.println("Que voulez vous faire ? \n 1. Jouer une carte. \n 2. Voir votre main. \n 3. Voir les cartes sur le plateau. \n 4. Attaquer. \n 5. Finir votre tour.");
         int choiceMenu = scanner.nextInt();
         switch (choiceMenu) {
@@ -85,13 +82,14 @@ public class PlateauDeJeu {
             case 3:
                 System.out.println("Voir les monstres sur le plateau");
                 if (joueur.getOnBoard().isEmpty()) {
-                System.out.println("Le plateau est vide");
-            }
-                    System.out.println("Les monstres de %s : ", joueur1.getName());
-                    joueur1.getOnBoard().forEach((monster -> System.out.println(monster.getName())));
+                    System.out.println("Le plateau est vide");
+                }
+                System.out.println(String.format("Les monstres de %s : ", joueur1.getName()));
+                joueur1.getOnBoard().forEach((monster -> System.out.println(monster.getName())));
                 break;
             case 4:
                 System.out.println("Attaquer");
+
                 break;
             case 5:
                 System.out.println("Finir votre tour");
@@ -101,26 +99,13 @@ public class PlateauDeJeu {
                 break;
 
         }
-        menuTour(joueur);
+        menuTour(joueur, target);
     }
 
     public Champion getAdversaire(Champion champion) {
         return (champion.equals(joueur1)) ? joueur2 : joueur1;
     }
 
-    private void attaquerAvecMonstres(Champion joueur) {
-        for (Monster monstre : joueur.getDeck()) {
-            if (!monstre.aAttenduUnTour()) {
-                monstre.attaquer(joueur2);
-                monstre.attendreTour();
-            }
-        }
-    }
-
-    public void tourSuivant() {
-        tourJoueur(joueur1);
-        tourJoueur(joueur2);
-    }
 
     public boolean finDePartie() {
         return joueur1.getHealth() <= 0 || joueur2.getHealth() <= 0 ;
@@ -128,7 +113,7 @@ public class PlateauDeJeu {
 
     public Monster drawRandomMonster(){
         Random random = new Random();
-        int choice = random.nextInt(0,4);
+        int choice = random.nextInt(4);
         switch (choice) {
             case 0:
                 return MonsterBuilder.buildMonster("Healer");
