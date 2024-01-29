@@ -72,6 +72,9 @@ public class PlateauDeJeu {
         switch (choiceMenu) {
             case 1:
                 System.out.println("Choisissez l'id d'une carte à poser sur le plateau");
+                for (Monster m: joueur.getDeck()) {
+                    System.out.println(String.format("ID: %s, Nom:%s,",m.getId(),m.getName()));
+                }
                 joueur.jouerCarte(scanner.nextInt());
                 System.out.println(String.format("La carte %s a été posée",joueur.getOnBoard().get(joueur.getOnBoard().size()-1).getName()));
                 break;
@@ -81,18 +84,18 @@ public class PlateauDeJeu {
                 break;
             case 3:
                 System.out.println("Voir les monstres sur le plateau");
-                if joueur.getOnBoard().isEmpty() {
-                    System.out.println("Le plateau est vide");
-                }
-
-                joueur.getOnBoard().forEach((monster -> System.out.println(monster.getName())));
+                if (joueur.getOnBoard().isEmpty()) {
+                System.out.println("Le plateau est vide");
+            }
+                    System.out.println("Les monstres de %s : ", joueur1.getName());
+                    joueur1.getOnBoard().forEach((monster -> System.out.println(monster.getName())));
                 break;
             case 4:
                 System.out.println("Attaquer");
                 break;
             case 5:
                 System.out.println("Finir votre tour");
-                break;
+                return;
             default:
                 System.out.println("Choix invalide");
                 break;
