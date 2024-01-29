@@ -6,7 +6,6 @@ import etu.imt.cardgame.Monsters.MonsterBuilder;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
 import java.util.logging.FileHandler;
@@ -50,6 +49,7 @@ public class PlateauDeJeu {
         Monster choice = drawRandomMonster();
         log.info(String.format("Le joueur %s commence son tour et pioche: %s", joueur.getName(), choice.getName()));
         System.out.println(String.format("Joueur %s commence son tour:", joueur.getName()));
+
         if(joueur.getOnBoard().size()>4){
             log.info("Le joueur à déjà trop de carte sur le plateau, il ne peut pas poser plus de carte");
         }
@@ -58,14 +58,47 @@ public class PlateauDeJeu {
             for (Monster m: joueur.getDeck()) {
                 System.out.println(String.format("ID: %s, Nom:%s,",m.getId(),m.getName()));
             }
-            System.out.println("Choisissez l'id d'une carte à poser sur le plateau");
-            joueur.jouerCarte(scanner.nextInt());
-            System.out.println(String.format("La carte %s a été posée",joueur.getOnBoard().get(joueur.getOnBoard().size()-1).getName()));
 
         }
+        menuTour(joueur);
 
         joueur.useAbility(joueur2);
         attaquerAvecMonstres(joueur);
+    }
+
+    public void menuTour (Champion joueur) {
+        System.out.println("Que voulez vous faire ? \n 1. Jouer une carte. \n 2. Voir votre main. \n 3. Voir les cartes sur le plateau. \n 4. Attaquer. \n 5. Finir votre tour.");
+        int choiceMenu = scanner.nextInt();
+        switch (choiceMenu) {
+            case 1:
+                System.out.println("Choisissez l'id d'une carte à poser sur le plateau");
+                joueur.jouerCarte(scanner.nextInt());
+                System.out.println(String.format("La carte %s a été posée",joueur.getOnBoard().get(joueur.getOnBoard().size()-1).getName()));
+                break;
+            case 2:
+                System.out.println("Les monstres de votre main");
+                joueur.getDeck().forEach((monster -> System.out.println(monster.getName())));
+                break;
+            case 3:
+                System.out.println("Voir les monstres sur le plateau");
+                if joueur.getOnBoard().isEmpty() {
+                    System.out.println("Le plateau est vide");
+                }
+
+                joueur.getOnBoard().forEach((monster -> System.out.println(monster.getName())));
+                break;
+            case 4:
+                System.out.println("Attaquer");
+                break;
+            case 5:
+                System.out.println("Finir votre tour");
+                break;
+            default:
+                System.out.println("Choix invalide");
+                break;
+
+        }
+        menuTour(joueur);
     }
 
     public Champion getAdversaire(Champion champion) {
