@@ -1,8 +1,11 @@
 package etu.imt.cardgame;
 
 import etu.imt.cardgame.Monsters.Monster;
+import etu.imt.cardgame.Monsters.ShieldMonster;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Champion implements Unit{
     private static int count = 0;
@@ -87,4 +90,13 @@ public class Champion implements Unit{
         return null;
     }
 
+    public Monster getShield(){
+        // Filter every monster to only get shield monster because they protect the champion
+        List<ShieldMonster> shieldMonsters = onBoard.stream()
+                .filter(ShieldMonster.class::isInstance)
+                .map(ShieldMonster.class::cast)
+                .toList();
+        // return first shield monster or null if not found
+        return shieldMonsters.isEmpty() ? null : shieldMonsters.get(0);
+    }
 }

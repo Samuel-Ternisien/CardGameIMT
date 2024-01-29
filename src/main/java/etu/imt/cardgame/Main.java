@@ -19,8 +19,10 @@ public class Main {
         PlateauDeJeu plateau = new PlateauDeJeu(champion1, champion2);
 
         plateau.debuterPartie();
-        plateau.tourJoueur(champion1);
-        plateau.tourJoueur(champion2);
+        // plateau.tourJoueur(champion1);
+        // plateau.tourJoueur(champion2);
+        System.out.println(champion1.getShield());
+        System.out.println(champion2.getShield());
 /*
         for (int i = 0; i < 5; i++) {
             System.out.println("Tour " + (i + 1));

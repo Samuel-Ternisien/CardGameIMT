@@ -76,7 +76,7 @@ public abstract class Monster implements Unit {
         this.power = amount;
     }
 
-    public void targetUnit(Unit target){
+    public void targetUnit(Unit target) throws Exception {
         target.receiveDamage(this.power);
     }
 
