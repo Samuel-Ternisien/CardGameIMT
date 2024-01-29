@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2024-01-29T12:46:37.067126Z</date>
+  <millis>1706532397067</millis>
+  <nanos>126000</nanos>
+  <sequence>0</sequence>
+  <logger>imt.cardGame.board</logger>
+  <level>INFO</level>
+  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
+  <method>debuterPartie</method>
+  <thread>1</thread>
+  <message>La partie débute avec les joueurs: Champion{id=1, name='Pierre', health=100, ability=Attaque} contre Champion{id=2, name='Samuel', health=100, ability=Soin}</message>
+</record>
+<record>
+  <date>2024-01-29T12:46:37.082724Z</date>
+  <millis>1706532397082</millis>
+  <nanos>724000</nanos>
+  <sequence>1</sequence>
+  <logger>imt.cardGame.board</logger>
+  <level>INFO</level>
+  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
+  <method>debuterPartie</method>
+  <thread>1</thread>
+  <message>Le joueur Pierre à tiré la carte: Simplet</message>
+</record>
+<record>
+  <date>2024-01-29T12:46:37.083111Z</date>
+  <millis>1706532397083</millis>
+  <nanos>111000</nanos>
+  <sequence>2</sequence>
+  <logger>imt.cardGame.board</logger>
+  <level>INFO</level>
+  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
+  <method>debuterPartie</method>
+  <thread>1</thread>
+  <message>Le joueur Pierre à tiré la carte: Necromancien</message>
+</record>
+<record>
+  <date>2024-01-29T12:46:37.083390Z</date>
+  <millis>1706532397083</millis>
+  <nanos>390000</nanos>
+  <sequence>3</sequence>
+  <logger>imt.cardGame.board</logger>
+  <level>INFO</level>
+  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
+  <method>debuterPartie</method>
+  <thread>1</thread>
+  <message>Le joueur Pierre à tiré la carte: Necromancien</message>
+</record>
+<record>
+  <date>2024-01-29T12:46:37.083706Z</date>
+  <millis>1706532397083</millis>
+  <nanos>706000</nanos>
+  <sequence>4</sequence>
+  <logger>imt.cardGame.board</logger>
+  <level>INFO</level>
+  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
+  <method>debuterPartie</method>
+  <thread>1</thread>
+  <message>Le joueur Pierre à tiré la carte: Protecteur</message>
+</record>
+<record>
+  <date>2024-01-29T12:46:37.083957Z</date>
+  <millis>1706532397083</millis>
+  <nanos>957000</nanos>
+  <sequence>5</sequence>
+  <logger>imt.cardGame.board</logger>
+  <level>INFO</level>
+  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
+  <method>debuterPartie</method>
+  <thread>1</thread>
+  <message>Le joueur Pierre à tiré la carte: Simplet</message>
+</record>
+<record>
+  <date>2024-01-29T12:46:37.084207Z</date>
+  <millis>1706532397084</millis>
+  <nanos>207000</nanos>
+  <sequence>6</sequence>
+  <logger>imt.cardGame.board</logger>
+  <level>INFO</level>
+  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
+  <method>debuterPartie</method>
+  <thread>1</thread>
+  <message>Le joueur Pierre à tiré la carte: Protecteur</message>
+</record>
+<record>
+  <date>2024-01-29T12:46:37.084444Z</date>
+  <millis>1706532397084</millis>
+  <nanos>444000</nanos>
+  <sequence>7</sequence>
+  <logger>imt.cardGame.board</logger>
+  <level>INFO</level>
+  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
+  <method>debuterPartie</method>
+  <thread>1</thread>
+  <message>Le joueur Samuel à tiré la carte: Protecteur</message>
+</record>
+<record>
+  <date>2024-01-29T12:46:37.084682Z</date>
+  <millis>1706532397084</millis>
+  <nanos>682000</nanos>
+  <sequence>8</sequence>
+  <logger>imt.cardGame.board</logger>
+  <level>INFO</level>
+  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
+  <method>debuterPartie</method>
+  <thread>1</thread>
+  <message>Le joueur Samuel à tiré la carte: Necromancien</message>
+</record>
+<record>
+  <date>2024-01-29T12:46:37.085014Z</date>
+  <millis>1706532397085</millis>
+  <nanos>14000</nanos>
+  <sequence>9</sequence>
+  <logger>imt.cardGame.board</logger>
+  <level>INFO</level>
+  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
+  <method>debuterPartie</method>
+  <thread>1</thread>
+  <message>Le joueur Samuel à tiré la carte: Necromancien</message>
+</record>
+<record>
+  <date>2024-01-29T12:46:37.085325Z</date>
+  <millis>1706532397085</millis>
+  <nanos>325000</nanos>
+  <sequence>10</sequence>
+  <logger>imt.cardGame.board</logger>
+  <level>INFO</level>
+  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
+  <method>debuterPartie</method>
+  <thread>1</thread>
+  <message>Le joueur Samuel à tiré la carte: Protecteur</message>
+</record>
+<record>
+  <date>2024-01-29T12:46:37.085569Z</date>
+  <millis>1706532397085</millis>
+  <nanos>569000</nanos>
+  <sequence>11</sequence>
+  <logger>imt.cardGame.board</logger>
+  <level>INFO</level>
+  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
+  <method>debuterPartie</method>
+  <thread>1</thread>
+  <message>Le joueur Samuel à tiré la carte: Soigneur</message>
+</record>
+<record>
+  <date>2024-01-29T12:46:37.085790Z</date>
+  <millis>1706532397085</millis>
+  <nanos>790000</nanos>
+  <sequence>12</sequence>
+  <logger>imt.cardGame.board</logger>
+  <level>INFO</level>
+  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
+  <method>debuterPartie</method>
+  <thread>1</thread>
+  <message>Le joueur Samuel à tiré la carte: Necromancien</message>
+</record>
+<record>
+  <date>2024-01-29T12:46:37.086006Z</date>
+  <millis>1706532397086</millis>
+  <nanos>6000</nanos>
+  <sequence>13</sequence>
+  <logger>imt.cardGame.board</logger>
+  <level>INFO</level>
+  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
+  <method>tourJoueur</method>
+  <thread>1</thread>
+  <message>Le joueur Pierre commence son tour et pioche: Protecteur</message>
+</record>
