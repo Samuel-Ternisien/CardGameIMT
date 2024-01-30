@@ -6,19 +6,22 @@ public class MonsterBuilder {
         Monster m = null;
         switch (type){
             case "Simple":
-                m = new SimpleMonster("Simplet", 45, 15);
+                m = new SimpleMonster("Simplet", 30, 15);
                 break;
             case "Shield":
-                m = new ShieldMonster("Protecteur", 40, 10);
+                m = new ShieldMonster("Protecteur", 20, 0);
                 break;
             case "Support":
-                m = new SupportMonster("Mascotte", 40, 10);
+                m = new SupportMonster("Mascotte", 40, 15);
                 break;
             case "Healer":
-                m = new HealerMonster("Soigneur", 35, 15);
+                m = new HealerMonster("Soigneur", 20, 15);
                 break;
             case "Necro":
                 m = new NecroMonster("Necromancien", 15, 3);
+                break;
+            case "Kamikaz":
+                m = new KamikazMonster("Kamikaz", 10, 100);
                 break;
             default:
                 break;

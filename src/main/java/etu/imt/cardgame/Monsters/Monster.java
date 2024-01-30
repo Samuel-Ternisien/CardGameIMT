@@ -12,7 +12,7 @@ public abstract class Monster implements Unit {
 
     public Monster(String name, int health, int power) {
         id = ++count;
-        this.name = name;
+        this.name = name + "_" + id;
         this.health = health;
         this.power = power;
     }
@@ -33,6 +33,7 @@ public abstract class Monster implements Unit {
     public int getHealth() {
         return health;
     }
+
     public void setHealth(int health) {
         this.health = health;
     }
@@ -52,15 +53,10 @@ public abstract class Monster implements Unit {
 
     @Override
     public void receiveBoost(int amount) {
-        this.power = amount;
+        this.power += amount;
     }
 
     public void targetUnit(Unit target) throws Exception {
         target.receiveDamage(this.power);
-    }
-
-
-    public int getID() {
-        return this.id;
     }
 }

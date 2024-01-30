@@ -5,7 +5,7 @@ public enum Abilities {
     Soin{
         @Override
         void useAbility(Unit target){
-            target.receiveDamage(-5);
+            target.receiveDamage(-20);
         }
     },
     Attaque{

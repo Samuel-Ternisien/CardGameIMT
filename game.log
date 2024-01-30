@@ -1,196 +1,31 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE log SYSTEM "logger.dtd">
-<log>
-<record>
-  <date>2024-01-30T14:50:22.284369500Z</date>
-  <millis>1706626222284</millis>
-  <nanos>369500</nanos>
-  <sequence>0</sequence>
-  <logger>cardGame</logger>
-  <level>INFO</level>
-  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
-  <method>debuterPartie</method>
-  <thread>1</thread>
-  <message>La partie débute avec les joueurs: Champion{id=1, name='Pierre', health=100, ability=Attaque} contre Champion{id=2, name='Samuel', health=100, ability=Soin}</message>
-</record>
-<record>
-  <date>2024-01-30T14:50:22.338898400Z</date>
-  <millis>1706626222338</millis>
-  <nanos>898400</nanos>
-  <sequence>1</sequence>
-  <logger>cardGame</logger>
-  <level>INFO</level>
-  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
-  <method>debuterPartie</method>
-  <thread>1</thread>
-  <message>Le joueur Pierre à tiré la carte: Protecteur</message>
-</record>
-<record>
-  <date>2024-01-30T14:50:22.339898300Z</date>
-  <millis>1706626222339</millis>
-  <nanos>898300</nanos>
-  <sequence>2</sequence>
-  <logger>cardGame</logger>
-  <level>INFO</level>
-  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
-  <method>debuterPartie</method>
-  <thread>1</thread>
-  <message>Le joueur Pierre à tiré la carte: Protecteur</message>
-</record>
-<record>
-  <date>2024-01-30T14:50:22.340899200Z</date>
-  <millis>1706626222340</millis>
-  <nanos>899200</nanos>
-  <sequence>3</sequence>
-  <logger>cardGame</logger>
-  <level>INFO</level>
-  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
-  <method>debuterPartie</method>
-  <thread>1</thread>
-  <message>Le joueur Pierre à tiré la carte: Soigneur</message>
-</record>
-<record>
-  <date>2024-01-30T14:50:22.341899800Z</date>
-  <millis>1706626222341</millis>
-  <nanos>899800</nanos>
-  <sequence>4</sequence>
-  <logger>cardGame</logger>
-  <level>INFO</level>
-  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
-  <method>debuterPartie</method>
-  <thread>1</thread>
-  <message>Le joueur Pierre à tiré la carte: Protecteur</message>
-</record>
-<record>
-  <date>2024-01-30T14:50:22.341899800Z</date>
-  <millis>1706626222341</millis>
-  <nanos>899800</nanos>
-  <sequence>5</sequence>
-  <logger>cardGame</logger>
-  <level>INFO</level>
-  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
-  <method>debuterPartie</method>
-  <thread>1</thread>
-  <message>Le joueur Pierre à tiré la carte: Simplet</message>
-</record>
-<record>
-  <date>2024-01-30T14:50:22.342896900Z</date>
-  <millis>1706626222342</millis>
-  <nanos>896900</nanos>
-  <sequence>6</sequence>
-  <logger>cardGame</logger>
-  <level>INFO</level>
-  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
-  <method>debuterPartie</method>
-  <thread>1</thread>
-  <message>Le joueur Pierre à tiré la carte: Protecteur</message>
-</record>
-<record>
-  <date>2024-01-30T14:50:22.342896900Z</date>
-  <millis>1706626222342</millis>
-  <nanos>896900</nanos>
-  <sequence>7</sequence>
-  <logger>cardGame</logger>
-  <level>INFO</level>
-  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
-  <method>debuterPartie</method>
-  <thread>1</thread>
-  <message>Le joueur Samuel à tiré la carte: Mascotte</message>
-</record>
-<record>
-  <date>2024-01-30T14:50:22.343899400Z</date>
-  <millis>1706626222343</millis>
-  <nanos>899400</nanos>
-  <sequence>8</sequence>
-  <logger>cardGame</logger>
-  <level>INFO</level>
-  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
-  <method>debuterPartie</method>
-  <thread>1</thread>
-  <message>Le joueur Samuel à tiré la carte: Mascotte</message>
-</record>
-<record>
-  <date>2024-01-30T14:50:22.345899500Z</date>
-  <millis>1706626222345</millis>
-  <nanos>899500</nanos>
-  <sequence>9</sequence>
-  <logger>cardGame</logger>
-  <level>INFO</level>
-  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
-  <method>debuterPartie</method>
-  <thread>1</thread>
-  <message>Le joueur Samuel à tiré la carte: Soigneur</message>
-</record>
-<record>
-  <date>2024-01-30T14:50:22.346899900Z</date>
-  <millis>1706626222346</millis>
-  <nanos>899900</nanos>
-  <sequence>10</sequence>
-  <logger>cardGame</logger>
-  <level>INFO</level>
-  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
-  <method>debuterPartie</method>
-  <thread>1</thread>
-  <message>Le joueur Samuel à tiré la carte: Mascotte</message>
-</record>
-<record>
-  <date>2024-01-30T14:50:22.347898800Z</date>
-  <millis>1706626222347</millis>
-  <nanos>898800</nanos>
-  <sequence>11</sequence>
-  <logger>cardGame</logger>
-  <level>INFO</level>
-  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
-  <method>debuterPartie</method>
-  <thread>1</thread>
-  <message>Le joueur Samuel à tiré la carte: Soigneur</message>
-</record>
-<record>
-  <date>2024-01-30T14:50:22.348899600Z</date>
-  <millis>1706626222348</millis>
-  <nanos>899600</nanos>
-  <sequence>12</sequence>
-  <logger>cardGame</logger>
-  <level>INFO</level>
-  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
-  <method>debuterPartie</method>
-  <thread>1</thread>
-  <message>Le joueur Samuel à tiré la carte: Soigneur</message>
-</record>
-<record>
-  <date>2024-01-30T14:50:22.349899300Z</date>
-  <millis>1706626222349</millis>
-  <nanos>899300</nanos>
-  <sequence>13</sequence>
-  <logger>cardGame</logger>
-  <level>INFO</level>
-  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
-  <method>tourJoueur</method>
-  <thread>1</thread>
-  <message>Le joueur Pierre commence son tour et pioche: Soigneur</message>
-</record>
-<record>
-  <date>2024-01-30T14:50:53.471903300Z</date>
-  <millis>1706626253471</millis>
-  <nanos>903300</nanos>
-  <sequence>14</sequence>
-  <logger>cardGame</logger>
-  <level>INFO</level>
-  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
-  <method>logConsoleAndFile</method>
-  <thread>1</thread>
-  <message>La carte Simplet a été posée
-</message>
-</record>
-<record>
-  <date>2024-01-30T14:51:00.366657Z</date>
-  <millis>1706626260366</millis>
-  <nanos>657000</nanos>
-  <sequence>15</sequence>
-  <logger>cardGame</logger>
-  <level>INFO</level>
-  <class>etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu</class>
-  <method>logConsoleAndFile</method>
-  <thread>1</thread>
-  <message>Le monstre Simplet attaque le champion et lui inflige 15 dégats. Il lui reste maintenant 85 PVs</message>
-</record>
+janv. 30, 2024 10:39:10 PM etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu debuterPartie
+INFOS: La partie débute avec les joueurs: Champion{id=1, name='Atlas Borne', health=60, ability=Attaque} contre Champion{id=2, name='Glemma Rouss', health=50, ability=Soin}
+janv. 30, 2024 10:39:10 PM etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu debuterPartie
+INFOS: Atlas Borne à tiré la carte: Mascotte_1
+janv. 30, 2024 10:39:10 PM etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu debuterPartie
+INFOS: Atlas Borne à tiré la carte: Soigneur_2
+janv. 30, 2024 10:39:10 PM etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu debuterPartie
+INFOS: Atlas Borne à tiré la carte: Simplet_3
+janv. 30, 2024 10:39:10 PM etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu debuterPartie
+INFOS: Atlas Borne à tiré la carte: Protecteur_4
+janv. 30, 2024 10:39:10 PM etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu debuterPartie
+INFOS: Atlas Borne à tiré la carte: Kamikaz_5
+janv. 30, 2024 10:39:10 PM etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu debuterPartie
+INFOS: Atlas Borne à tiré la carte: Mascotte_6
+janv. 30, 2024 10:39:10 PM etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu debuterPartie
+INFOS: Glemma Rouss à tiré la carte: Kamikaz_7
+janv. 30, 2024 10:39:10 PM etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu debuterPartie
+INFOS: Glemma Rouss à tiré la carte: Soigneur_8
+janv. 30, 2024 10:39:10 PM etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu debuterPartie
+INFOS: Glemma Rouss à tiré la carte: Mascotte_9
+janv. 30, 2024 10:39:10 PM etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu debuterPartie
+INFOS: Glemma Rouss à tiré la carte: Protecteur_10
+janv. 30, 2024 10:39:10 PM etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu debuterPartie
+INFOS: Glemma Rouss à tiré la carte: Soigneur_11
+janv. 30, 2024 10:39:10 PM etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu debuterPartie
+INFOS: Glemma Rouss à tiré la carte: Simplet_12
+janv. 30, 2024 10:39:10 PM etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu logConsoleAndFile
+INFOS: Atlas Borne commence son tour et pioche: Simplet_13
+janv. 30, 2024 10:39:26 PM etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu logConsoleAndFile
+INFOS: La carte Protecteur_4 a été posée
+
