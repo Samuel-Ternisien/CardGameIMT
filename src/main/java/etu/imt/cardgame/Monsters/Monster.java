@@ -81,4 +81,7 @@ public abstract class Monster implements Unit {
     }
 
 
+    public int getID() {
+        return this.id;
+    }
 }

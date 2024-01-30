@@ -54,11 +54,6 @@ public class PlateauDeJeu {
             log.info("Le joueur à déjà trop de carte sur le plateau, il ne peut pas poser plus de carte");
         }
         else{
-            System.out.println("Vous pouvez poser les cartes:");
-            for (Monster m: joueur.getDeck()) {
-                System.out.println(String.format("ID: %s, Nom:%s,",m.getId(),m.getName()));
-            }
-
         }
         menuTour(joueur, target);
     }
@@ -70,10 +65,10 @@ public class PlateauDeJeu {
             case 1:
                 System.out.println("Choisissez l'id d'une carte à poser sur le plateau");
                 for (Monster m: joueur.getDeck()) {
-                    System.out.println(String.format("ID: %s, Nom:%s,",m.getId(),m.getName()));
+                    System.out.printf("ID: %s, Nom:%s,%n",m.getId(),m.getName());
                 }
                 joueur.jouerCarte(scanner.nextInt());
-                System.out.println(String.format("La carte %s a été posée",joueur.getOnBoard().get(joueur.getOnBoard().size()-1).getName()));
+                System.out.printf("La carte %s a été posée%n",joueur.getOnBoard().get(joueur.getOnBoard().size()-1).getName());
                 break;
             case 2:
                 System.out.println("Les monstres de votre main");
@@ -83,13 +78,17 @@ public class PlateauDeJeu {
                 System.out.println("Voir les monstres sur le plateau");
                 if (joueur.getOnBoard().isEmpty()) {
                     System.out.println("Le plateau est vide");
+                    break;
                 }
                 System.out.println(String.format("Les monstres de %s : ", joueur1.getName()));
                 joueur1.getOnBoard().forEach((monster -> System.out.println(monster.getName()  + monster.getHealth() + monster.getPower())));
                 break;
             case 4:
                 System.out.println("Attaquer");
-
+                System.out.println("Voici le plateau de votre adversaire:");
+                System.out.printf("Champion: Nom: %s, PV: %s%n", target.getName(), target.getHealth());
+                System.out.println("Monstres:");
+                target.getOnBoard().forEach((monster -> System.out.printf("ID: %s,Nom: %s, PV: %s, CP: %s %n",monster.getID(), monster.getName(), monster.getHealth(),monster.getPower())));
                 break;
             case 5:
                 System.out.println("Finir votre tour");
