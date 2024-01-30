@@ -1,5 +1,6 @@
 package etu.imt.cardgame.Monsters;
 
+//>> Constructeur des monstres faisant appel à la classe monstre
 public class MonsterBuilder {
     public static Monster buildMonster(String type){
         Monster m = null;

@@ -2,20 +2,19 @@ package etu.imt.cardgame.Monsters;
 
 import etu.imt.cardgame.Unit;
 
+//>> Définition de la classe monstre
 public abstract class Monster implements Unit {
     private static int count = 0;
     private final int id;
     private String name;
     private int health;
     private int power;
-    private int toursAttendus; //>> Attendre 1 tour avant d'attaquer
 
     public Monster(String name, int health, int power) {
         id = ++count;
         this.name = name;
         this.health = health;
         this.power = power;
-        this.toursAttendus = 0;
     }
 
     // Getter and setter for every usefull variable

@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+//>> Définition des joueurs
 public class Champion implements Unit{
     private static int count = 0;
     private final int id;
@@ -52,7 +53,7 @@ public class Champion implements Unit{
     // Ajout de la fonction jouerCarte que j'utilise dans PlateaudeJeu
     public void jouerCarte(int id) {
         // On récupére le monstre du deck grâce à son id
-        Monster m = getMonsterById(id);
+        Monster m = getDeckMonsterById(id);
         // On le rajoute sur le plateau
         onBoard.add(m);
         // Puis on le supprime du deck
@@ -78,11 +79,19 @@ public class Champion implements Unit{
     }
 
     public ArrayList<Monster> getOnBoard(){
-        return onBoard;
+        return this.onBoard;
     }
 
-    public Monster getMonsterById(int id){
+    public Monster getDeckMonsterById(int id){
         for (Monster monster : deck) {
+            if (monster.getId()==id) {
+                return monster;
+            }
+        }
+        return null;
+    }
+    public Monster getBoardMonsterById(int id){
+        for (Monster monster : onBoard) {
             if (monster.getId()==id) {
                 return monster;
             }
@@ -95,8 +104,16 @@ public class Champion implements Unit{
         List<ShieldMonster> shieldMonsters = onBoard.stream()
                 .filter(ShieldMonster.class::isInstance)
                 .map(ShieldMonster.class::cast)
-                .toList();
+                .collect(Collectors.toList());
         // return first shield monster or null if not found
         return shieldMonsters.isEmpty() ? null : shieldMonsters.get(0);
+    }
+
+    public List<Monster> getDeadMonsters(){
+        List<Monster> dead = onBoard.stream()
+                .filter(monster -> monster.getHealth()==0)
+                .map(Monster.class::cast)
+                .collect(Collectors.toList());
+        return dead;
     }
 }

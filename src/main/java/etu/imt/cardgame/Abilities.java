@@ -1,5 +1,6 @@
 package etu.imt.cardgame;
 
+//>> Capacités spéciales des champions
 public enum Abilities {
     Soin{
         @Override

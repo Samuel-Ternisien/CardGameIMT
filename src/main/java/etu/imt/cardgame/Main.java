@@ -6,9 +6,9 @@ import etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu;
 
 import java.io.IOException;
 import java.util.Scanner;
-
+/** @author Pierre VANDENBERGHE et Samuel TERNISIEN **/
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
 
         // Création des champions
@@ -18,21 +18,9 @@ public class Main {
         // Création du plateau de jeu
         PlateauDeJeu plateau = new PlateauDeJeu(champion1, champion2);
 
+        // Lancement de la partie
         plateau.debuterPartie();
-/*
-        for (int i = 0; i < 5; i++) {
-            System.out.println("Tour " + (i + 1));
-
-            // Tour du joueur 1
-            jouerTour(plateau, champion1, scanner);
-
-            // Tour du joueur 2
-            jouerTour(plateau, champion2, scanner);
-        }
-
-        plateau.finDePartie();
-
-        scanner.close();
- */
     }
+
+    //handlers = java.util.logging.FileHandler;
 }
