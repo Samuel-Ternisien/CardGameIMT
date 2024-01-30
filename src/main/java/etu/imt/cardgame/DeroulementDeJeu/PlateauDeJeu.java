@@ -72,6 +72,7 @@ public class PlateauDeJeu {
         // Réinitialise les units qui ont attacké
         attackUsed.clear();
         Monster choice = drawRandomMonster();
+        System.out.println("----------------------------------------");
         logConsoleAndFile(String.format("%s commence son tour et pioche: %s", joueur.getName(), choice.getName()));
         // On présente le menu au joueur et une fois qu'il sort du menu on vérifie que la partie ne soit pas fini
         menuTour(joueur, target);
@@ -188,7 +189,7 @@ public class PlateauDeJeu {
                         }
                     }
                     else{
-                        menuTarget(joueur);
+                        menuTarget(target);
                         int targetInt = scanner.nextInt();
                         if (targetInt==0){
                             logConsoleAndFile(String.format("%s utilise la compétence %s sur %s",
@@ -206,7 +207,7 @@ public class PlateauDeJeu {
                             ));
                             joueur.useAbility(target.getBoardMonsterById(targetInt));
                         }
-                    }                    
+                    }
                     break;
                 case 6:
                     logConsoleAndFile(String.format("Le tour de %s est fini, début du tour de %s", joueur.getName(), target.getName()));
