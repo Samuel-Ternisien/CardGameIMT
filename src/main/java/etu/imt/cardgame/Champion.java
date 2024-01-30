@@ -4,19 +4,18 @@ import etu.imt.cardgame.Monsters.Monster;
 import etu.imt.cardgame.Monsters.ShieldMonster;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
 //>> Définition des joueurs
-public class Champion implements Unit{
+public class Champion implements Unit {
     private static int count = 0;
     private final int id;
-    private String name;
+    private final String name;
     private int health;
-    private Abilities ability;
-    private ArrayList<Monster> deck;
-    private ArrayList<Monster> onBoard;
+    private final Abilities ability;
+    private final ArrayList<Monster> deck;
+    private final ArrayList<Monster> onBoard;
 
     public Champion(String name, int health, Abilities ability) {
         this.id = ++count;
@@ -34,7 +33,6 @@ public class Champion implements Unit{
 
     @Override
     public void receiveBoost(int amount) {
-        return;
     }
 
     @Override
@@ -42,15 +40,15 @@ public class Champion implements Unit{
         return this.health;
     }
 
-    public String getName(){
+    public String getName() {
         return this.name;
     }
 
-    public ArrayList<Monster> getDeck(){
+    public ArrayList<Monster> getDeck() {
         return this.deck;
     }
 
-    public ArrayList<Monster> getOnBoard(){
+    public ArrayList<Monster> getOnBoard() {
         return this.onBoard;
     }
 
@@ -58,12 +56,13 @@ public class Champion implements Unit{
         return this.ability;
     }
 
-    public void useAbility(Unit target){
+    public void useAbility(Unit target) {
         ability.useAbility(target);
     }
 
     /**
      * When the player plays a card, we remove it from the deck and add it to the board
+     *
      * @param id of the monsters to be played
      */
     public void jouerCarte(int id) {
@@ -91,10 +90,11 @@ public class Champion implements Unit{
 
     /**
      * Allow the gathering of a monsters in the DECK of a player using the monster id
+     *
      * @param id id to find
      * @return The monster or null if not found
      */
-    public Monster getDeckMonsterById(int id){
+    public Monster getDeckMonsterById(int id) {
         return deck.stream().filter(monster -> monster.getId() == id)
                 .findFirst()
                 .orElse(null);
@@ -102,10 +102,11 @@ public class Champion implements Unit{
 
     /**
      * Same as previous function but for the board
+     *
      * @param id id to find
      * @return The monster or null if not found
      */
-    public Monster getBoardMonsterById(int id){
+    public Monster getBoardMonsterById(int id) {
         return onBoard.stream()
                 .filter(monster -> monster.getId() == id)
                 .findFirst()
@@ -115,9 +116,10 @@ public class Champion implements Unit{
 
     /**
      * Function used to check if the champion have a shield monster on its board
+     *
      * @return The first shield monster found or null
      */
-    public Monster getShield(){
+    public Monster getShield() {
         // Filter every monster to only get shield monster because they protect the champion
         List<ShieldMonster> shieldMonsters = onBoard.stream()
                 .filter(ShieldMonster.class::isInstance)
@@ -129,11 +131,12 @@ public class Champion implements Unit{
 
     /**
      * Function used to check if the champion have a dead monster on its board
+     *
      * @return List of dead monster or null
      */
-    public List<Monster> getDeadMonsters(){
+    public List<Monster> getDeadMonsters() {
         List<Monster> dead = onBoard.stream()
-                .filter(monster -> monster.getHealth()==0)
+                .filter(monster -> monster.getHealth() == 0)
                 .map(Monster.class::cast)
                 .collect(Collectors.toList());
         onBoard.removeAll(dead);

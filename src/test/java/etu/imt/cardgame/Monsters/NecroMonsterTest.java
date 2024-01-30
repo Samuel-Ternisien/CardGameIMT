@@ -1,6 +1,6 @@
 package etu.imt.cardgame.Monsters;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class NecroMonsterTest {
@@ -37,11 +37,11 @@ class NecroMonsterTest {
             NecroMonster m2 = new NecroMonster("m2", 50, 10);
             m1 = m2.resurrect(m1);
             assertTrue(
-                    m1.getHealth()==7 &&
-                    m1.getPower()==old_power*0.80 &&
-                    m1.getName().startsWith("Zombified_"
-                    ));
-        } catch (Exception e){
+                    m1.getHealth() == 7 &&
+                            m1.getPower() == old_power * 0.80 &&
+                            m1.getName().startsWith("Zombified_"
+                            ));
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

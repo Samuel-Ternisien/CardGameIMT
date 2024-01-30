@@ -2,7 +2,7 @@ package etu.imt.cardgame.Monsters;
 
 import etu.imt.cardgame.Unit;
 
-public class SupportMonster extends Monster{
+public class SupportMonster extends Monster {
     public SupportMonster(String name, int health, int power) {
         super(name, health, power);
     }

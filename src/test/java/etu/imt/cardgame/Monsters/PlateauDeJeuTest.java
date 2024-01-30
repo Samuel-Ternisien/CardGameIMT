@@ -5,7 +5,8 @@ import etu.imt.cardgame.Champion;
 import etu.imt.cardgame.DeroulementDeJeu.PlateauDeJeu;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class PlateauDeJeuTest {
     @Test
@@ -24,12 +25,13 @@ public class PlateauDeJeuTest {
         // Check les monstres morts dans le plateau
         pdj.checkDeadMonster(c1, c2);
         // On vérifie que le monstre du cimetière à bien le même nom que celui mort
-        assertEquals(pdj.cemetery.get(0).getName(),"Simplet_2");
+        assertEquals(pdj.cemetery.get(0).getName(), "Simplet_2");
         // On vérifie que son monstre n'est pu dans son plateau de jeu
         assertTrue(c2.getOnBoard().isEmpty());
     }
+
     @Test
-    void testCombatBetweenTwoChampions() throws Exception{
+    void testCombatBetweenTwoChampions() throws Exception {
         Champion c1 = new Champion("Champion1", 50, Abilities.Attaque);
         Champion c2 = new Champion("Champion2", 50, Abilities.Attaque);
         PlateauDeJeu pdj = new PlateauDeJeu(c1, c2);
@@ -47,14 +49,14 @@ public class PlateauDeJeuTest {
     }
 
     @Test
-    void testAbilities() throws Exception{
+    void testAbilities() throws Exception {
         Champion c1 = new Champion("Champion1", 50, Abilities.Soin);
         Champion c2 = new Champion("Champion2", 50, Abilities.Attaque);
         // On vérifie que la compétence attaque fonctionne
         c2.useAbility(c1);
-        assertEquals(c1.getHealth(),40);
+        assertEquals(c1.getHealth(), 40);
         // On vérifie que la compétence soin fonctionne
         c1.useAbility(c1);
-        assertEquals(c1.getHealth(),60);
+        assertEquals(c1.getHealth(), 60);
     }
 }
