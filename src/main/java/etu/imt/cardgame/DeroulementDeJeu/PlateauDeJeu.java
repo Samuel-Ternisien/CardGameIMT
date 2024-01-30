@@ -41,7 +41,7 @@ public class PlateauDeJeu {
             log.info(String.format("Le joueur %s à tiré la carte: %s", joueur2.getName(), choice.getName()));
             joueur2.addMonster(choice);
         }
-
+        tourJoueur(joueur1, joueur2);
     }
 
     public void tourJoueur(Champion joueur, Champion target) {
@@ -56,6 +56,9 @@ public class PlateauDeJeu {
         else{
         }
         menuTour(joueur, target);
+        if (!finDePartie()) {
+            tourJoueur(target, joueur);
+        }
     }
 
     public void menuTour(Champion joueur, Champion target) {
@@ -80,16 +83,11 @@ public class PlateauDeJeu {
                     System.out.println("Le plateau est vide");
                     break;
                 }
-                System.out.println(String.format("Les monstres de %s : ", joueur1.getName()));
+                System.out.printf("Les monstres de %s : %n", target.getName());
                 joueur1.getOnBoard().forEach((monster -> System.out.println(monster.getName()  + monster.getHealth() + monster.getPower())));
                 break;
             case 4:
-                System.out.println("Attaquer");
-                System.out.println("Voici le plateau de votre adversaire:");
-                System.out.printf("Champion: Nom: %s, PV: %s%n", target.getName(), target.getHealth());
-                System.out.println("Monstres:");
-                target.getOnBoard().forEach((monster -> System.out.printf("ID: %s,Nom: %s, PV: %s, CP: %s %n",monster.getID(), monster.getName(), monster.getHealth(),monster.getPower())));
-                break;
+                attackTurn(joueur, target);
             case 5:
                 System.out.println("Finir votre tour");
                 return;
@@ -127,6 +125,14 @@ public class PlateauDeJeu {
             default:
                 return MonsterBuilder.buildMonster("Simple");
         }
+    }
+
+    public static void attackTurn(Champion attaquant, Champion target) {
+        System.out.println("Attaquer");
+        System.out.println("Voici le plateau de votre adversaire:");
+        System.out.printf("Champion: Nom: %s, PV: %s%n", target.getName(), target.getHealth());
+        System.out.println("Monstres:");
+        target.getOnBoard().forEach((monster -> System.out.printf("ID: %s,Nom: %s, PV: %s, CP: %s %n",monster.getID(), monster.getName(), monster.getHealth(),monster.getPower())));
     }
 
 

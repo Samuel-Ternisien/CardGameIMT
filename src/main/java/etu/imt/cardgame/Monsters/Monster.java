@@ -46,26 +46,6 @@ public abstract class Monster implements Unit {
         this.power = power;
     }
 
-    //>> Attendre 1 tour
-    public boolean aAttenduUnTour() {
-        return toursAttendus > 0;
-    }
-
-    public void attendreTour() {
-        if (toursAttendus > 0) {
-            toursAttendus--;
-        }
-    }
-
-    public void attaquer(Unit cible) {
-        if (!aAttenduUnTour()) {
-            cible.receiveDamage(getPower());
-            attendreTour();
-        } else {
-            System.out.println("Le monstre doit attendre un tour avant d'attaquer à nouveau.");
-        }
-    }
-
     @Override
     public void receiveDamage(int amount) {
         this.health -= amount;
