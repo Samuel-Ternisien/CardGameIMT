@@ -77,7 +77,7 @@ public class PlateauDeJeu {
                 break;
             case 2:
                 System.out.println("Les monstres de votre main");
-                joueur.getDeck().forEach((monster -> System.out.println(monster.getName())));
+                joueur.getDeck().forEach((monster -> System.out.println(monster.getName() + monster.getHealth() + monster.getPower())));
                 break;
             case 3:
                 System.out.println("Voir les monstres sur le plateau");
@@ -85,7 +85,7 @@ public class PlateauDeJeu {
                     System.out.println("Le plateau est vide");
                 }
                 System.out.println(String.format("Les monstres de %s : ", joueur1.getName()));
-                joueur1.getOnBoard().forEach((monster -> System.out.println(monster.getName())));
+                joueur1.getOnBoard().forEach((monster -> System.out.println(monster.getName()  + monster.getHealth() + monster.getPower())));
                 break;
             case 4:
                 System.out.println("Attaquer");
