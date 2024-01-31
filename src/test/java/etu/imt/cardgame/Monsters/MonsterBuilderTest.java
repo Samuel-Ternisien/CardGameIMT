@@ -12,10 +12,10 @@ class MonsterBuilderTest {
         Monster support = MonsterBuilder.buildMonster("Support");
         Monster healer = MonsterBuilder.buildMonster("Healer");
         Monster necro = MonsterBuilder.buildMonster("Necro");
-        assertEquals("Simplet", simple.getName());
-        assertEquals("Protecteur", shield.getName());
-        assertEquals("Mascotte", support.getName());
-        assertEquals("Soigneur", healer.getName());
-        assertEquals("Necromancien", necro.getName());
+        assertEquals("Simplet_1", simple.getName());
+        assertEquals("Protecteur_2", shield.getName());
+        assertEquals("Mascotte_3", support.getName());
+        assertEquals("Soigneur_4", healer.getName());
+        assertEquals("Necromancien_5", necro.getName());
     }
 }
